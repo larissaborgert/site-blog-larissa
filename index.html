@@ -1,0 +1,192 @@
+meu blog - girl
+meu primeiro post
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube das Garotas | Blog</title>
+    <style>
+        /* Configurações Gerais de Estilo (Estética Soft/Pink) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff5f6;
+            color: #4a4a4a;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffb6c1;
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Georgia', serif;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Menu de Categorias */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 1em;
+            cursor: pointer;
+            color: #ff69b4;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        nav button:hover, nav button.active {
+            border-bottom: 2px solid #ff69b4;
+            color: #ff1493;
+        }
+
+        /* Container dos Posts */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.2);
+            border-left: 5px solid #ffb6c1;
+            transition: transform 0.2s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .post-category {
+            display: inline-block;
+            background: #ffe4e1;
+            color: #ff1493;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .post-title {
+            margin: 0 0 10px 0;
+            color: #333;
+            font-family: 'Georgia', serif;
+        }
+
+        .post-meta {
+            font-size: 0.85em;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .post-content {
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #aaa;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho do Blog -->
+    <header>
+        <h1>Clube das Garotas 🎀</h1>
+        <p>Nosso espaço seguro para falar de encontros, maquiagens, roupas e segredos.</p>
+    </header>
+
+    <!-- Menu Interativo de Filtros -->
+    <nav>
+        <button class="active" onclick="filtrarPosts('todos', this)">Tudo</button>
+        <button onclick="filtrarPosts('encontros', this)">Encontros ☕</button>
+        <button onclick="filtrarPosts('maquiagem', this)">Maquiagem 💄</button>
+        <button onclick="filtrarPosts('looks', this)">Looks 👗</button>
+    </nav>
+
+    <!-- Área Onde Ficam os Posts -->
+    <div class="container" id="posts-container">
+
+        <!-- Exemplo de Post de Encontro -->
+        <article class="post-card" data-category="encontros">
+            <span class="post-category">Encontros</span>
+            <h2 class="post-title">O pior primeiro date da minha vida (com reviravolta!)</h2>
+            <div class="post-meta">Postado por Amanda em 15 de Junho de 2026</div>
+            <p class="post-content">Garotas, vocês não vão acreditar. Ele me levou para um restaurante super caro, esqueceu a carteira no carro e depois sumiu no banheiro! Sorte que a garçonete era um amor e me ajudou...</p>
+        </article>
+
+        <!-- Exemplo de Post de Maquiagem -->
+        <article class="post-card" data-category="maquiagem">
+            <span class="post-category">Maquiagem</span>
+            <h2 class="post-title">Guia definitivo: Como fazer o delineado gatinho perfeito</h2>
+            <div class="post-meta">Postado por Bia em 14 de Junho de 2026</div>
+            <p class="post-content">Se você sempre borra o olho esquerdo, o segredo está no ângulo do espelho. Olhe sempre para baixo e use uma fita micropore para guiar o traço inicial...</p>
+        </article>
+
+        <!-- Exemplo de Post de Looks -->
+        <article class="post-card" data-category="looks">
+            <span class="post-category">Looks</span>
+            <h2 class="post-title">Tendência Coquette: 3 formas fáceis de usar laços no dia a dia</h2>
+            <div class="post-meta">Postado por Carol em 12 de Junho de 2026</div>
+            <p class="post-content">Os laços estão em tudo! Minha combinação favorita da semana foi colocar um laço rosa fita de cetim no cabelo prendendo um coque despojado, combinando com uma sapatilha básica.</p>
+        </article>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Clube das Garotas. Feito com 💕 no GitHub Pages.</p>
+    </footer>
+
+    <!-- Sistema JavaScript para Filtrar os Posts na Tela -->
+    <script>
+        function filtrarPosts(categoria, botao) {
+            // Atualiza o botão ativo no menu
+            const botoes = document.querySelectorAll('nav button');
+            botoes.forEach(btn => btn.classList.remove('active'));
+            botao.classList.add('active');
+
+            // Filtra os cards de post
+            const posts = document.querySelectorAll('.post-card');
+            posts.forEach(post => {
+                if (categoria === 'todos' || post.getAttribute('data-category') === categoria) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
