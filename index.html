@@ -9,25 +9,54 @@
 
 <body>
     <header>
+        <!-- Novas tags: navigation para links futuros e um grupo de títulos -->
+        <hgroup>
+            <h1>MEU BLOG - FOR GIRLS</h1>
+            <p>Um espaço feito por garotas e para garotas compartilharem os bastidores de dates engraçados, resenhas
+                sinceras de maquiagem, achados de looks e desabafos sobre a vida, totalmente livre de julgamentos. Sinta-se em casa!</p>
+        </hgroup>
+        <nav>
+            <!-- Espaço reservado para futuros links do menu (Ex: Home, Sobre, Contato) -->
+        </nav>
     </header>
+
     <main>
-        <h1>MEU BLOG - FOR GIRLS</h1>
-        <p>Um espaço feito por garotas e para garotas compartilharem os bastidores de dates engraçados, resenhas
-            sinceras de maquiagem, achados de looks e desabafos sobre a vida, totalmente livre de julgamentos. Sinta-se
-            em casa! </p>
-        <h2> Meu Primeiro Post: </h2>
-        <p>Garotas, preciso da ajuda de vocês! Estou montando uma necessaire nova para o dia a dia e quero produtos que
-            realmente durem na pele, principalmente corretivo e blush.</p>
-        <h2> Meu Segundo Post</h2>
-        <p>Garotas, vocês já viram aquele truque do TikTok de passar batom vermelho na bochecha antes da base para dar
-            aquele efeito "coradinha de sol"?Resolvi testar ontem para ir à faculdade. No vídeo parecia perfeito, mas na
-            vida real eu parecia que tinha levado um sol de 40 graus sem protetor solar! Demorou um século para
-            conseguir esfumar e cobrir o vermelhão com o corretivo.No final das contas a pele ficou linda e super
-            duradoura, mas o susto no espelho não valeu o desespero. Acho que continuo fiel ao meu blush líquido rosinha
-            de sempre.</p>
+        <!-- Nova tag: article para isolar cada postagem do blog de forma independente -->
+        <article>
+            <header>
+                <h2>Meu Primeiro Post:</h2>
+                <!-- Nova tag: time para indicar a data da publicação -->
+                <p><time datetime="2026-06-15">15 de Junho de 2026</time></p>
+            </header>
+            <p>Garotas, preciso da ajuda de vocês! Estou montando uma necessaire nova para o dia a dia e quero produtos que
+                realmente durem na pele, principalmente corretivo e blush.</p>
+        </article>
+
+        <article>
+            <header>
+                <h2>Meu Segundo Post:</h2>
+                <p><time datetime="2026-06-15">15 de Junho de 2026</time></p>
+            </header>
+            <p>Garotas, vocês já viram aquele truque do TikTok de passar batom vermelho na bochecha antes da base para dar
+                aquele efeito <q>"coradinha de sol"</q>?</p> <!-- Nova tag: q para citações curtas -->
+            
+            <p>Resolvi testar ontem para ir à faculdade. No vídeo parecia perfeito, mas na vida real eu parecia que tinha levado um sol de 40 graus sem protetor solar! Demorou um século para conseguir esfumar e cobrir o vermelhão com o corretivo.</p>
+            
+            <p>No final das contas a pele ficou linda e super duradoura, mas o susto no espelho não valeu o desespero. Acho que continuo fiel ao meu blush líquido rosinha de sempre.</p>
+        </article>
     </main>
+
     <footer>
+        <!-- Nova tag: small para direitos autorais ou notas de rodapé -->
+        <p><small>&copy; 2026 FOR GIRLS Blog. Todos os direitos reservados.</small></p>
     </footer>
 </body>
 
 </html>
+
+<!-- <article>: Usada para envolver cada post. Ela indica que aquele conteúdo é independente e faz sentido sozinho.
+    <hgroup>: Agrupa o título principal e o subtítulo/descrição do blog no topo.
+        <nav>: Tag correta para criar o menu de navegação do site futuramente.
+    <time>: Ajuda os motores de busca a entenderem exatamente quando o post foi publicado.
+    <q>: Usada para marcar a expressão curta "coradinha de sol" como uma citação/termo falado por terceiros.
+    <small>: Ideal para o texto de direitos autorais e avisos legais no rodapé. **
